@@ -11,6 +11,7 @@ public class Service {
 	
 public void setUpMovies() {
 	
+	
 	movieMap.put(1, new Movie("Stargate", "Sci-fi", "A12"));
 	movieMap.put(2, new Movie("Transformers", "Death of my Childhood", "E"));
 	movieMap.put(3, new Movie("Some Movie", "Don't care", "18"));
