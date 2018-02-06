@@ -2,10 +2,13 @@ package davidCinema.cinema;
 
 import java.util.HashMap;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Service {
 
 	static int idCounter = 0;
-
+	private ObjectMapper mapper = new ObjectMapper();
 	private HashMap<Integer, Movie> movieMap = new HashMap<>();
 
 	public void setUpMovies() {
@@ -24,6 +27,19 @@ public class Service {
 
 		idCounter += 1;
 		movieMap.put(idCounter, new Movie(title, genre, ageRating));
+
+	}
+
+	public String convertToJson(int id) {
+
+		try {
+			return mapper.writeValueAsString(retiveMovie(id));
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return null;
 
 	}
 
