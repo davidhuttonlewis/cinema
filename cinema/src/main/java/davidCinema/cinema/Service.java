@@ -44,14 +44,9 @@ public class Service {
 	}
 
 	public int genreCount(String genre) {
-		int count = 0;
 
-		for (int i = 1; i <= movieMap.size(); i++) {
-			if (movieMap.get(i).getGenre().equalsIgnoreCase(genre))
-				count++;
-		}
-
-		return count;
+		return (int) movieMap.values().stream().filter((Movie movie) -> movie.getGenre().equalsIgnoreCase(genre))
+				.count();
 	}
 
 }
