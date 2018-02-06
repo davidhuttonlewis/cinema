@@ -9,7 +9,6 @@ public class Main {
 		System.out.println(service1.retiveMovie(1));
 		service1.addMovie("Lion King", "Something", "E");
 		System.out.println(service1.retiveMovie(4));
-
 		System.out.println(service1.convertToJson(2));
 
 	}
