@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Service {
 
 	static int idCounter = 0;
-	// ArrayList<Movie> arrayList = new ArrayList<Movie>();
+
 	private HashMap<Integer, Movie> movieMap = new HashMap<>();
 
 	public void setUpMovies() {
