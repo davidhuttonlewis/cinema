@@ -10,7 +10,7 @@ public class ServiceTest extends TestCase {
 	public void testGenreCount() {
 		Service service1 = new Service();
 		service1.setUpMovies();
-		assertEquals(1, service1.genreCount("Sci-fi"));
+		assertEquals(2, service1.genreCount("Sci-fi"));
 	}
 
 }

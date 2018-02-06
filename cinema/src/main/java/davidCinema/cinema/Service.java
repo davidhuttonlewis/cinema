@@ -15,7 +15,7 @@ public class Service {
 
 		addMovie("Stargate", "Sci-fi", "A12");
 		addMovie("Transformers", "Death of my Childhood", "E");
-		addMovie("Some Movie", "Don't care", "18");
+		addMovie("Some Movie", "Sci-fi", "18");
 	}
 
 	public Movie retiveMovie(int key) {
@@ -46,10 +46,9 @@ public class Service {
 	public int genreCount(String genre) {
 		int count = 0;
 
-		for (int i = 1; i < movieMap.size(); i++) {
-			if (movieMap.get(i).getGenre().equalsIgnoreCase(genre)) {
+		for (int i = 1; i <= movieMap.size(); i++) {
+			if (movieMap.get(i).getGenre().equalsIgnoreCase(genre))
 				count++;
-			}
 		}
 
 		return count;
